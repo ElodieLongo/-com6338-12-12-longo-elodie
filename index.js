@@ -31,7 +31,7 @@ class Word {
     if(this.word.includes(letter)){
       [...this.word].forEach((l,i) => {
         if(l === letter){
-          this.displayWordArr[i] = letter;
+          displayWordArr[i] = letter;
         }
       })
       this.displayWord = displayWordArr.join("");
@@ -41,6 +41,12 @@ class Word {
       this.incorrectLetters.push(letter);
     } 
   }
+
+  /*
+  expect(word.displayWord).to.eq('______')
+          word.guessLetter('b')
+          expect(word.displayWord).to.eq('b_____')
+          */
 
   // implement the updateScreen method:
   updateScreen() {
